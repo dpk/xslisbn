@@ -67,4 +67,23 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:function>
+
+  <xsl:function name="isbn:validate">
+    <xsl:param name="isbn" />
+
+    <xsl:variable name="raw-isbn" select="isbn:unformat($isbn)" />
+    <xsl:variable name="isbn-length" select="string-length($raw-isbn)" />
+
+    <xsl:choose>
+      <xsl:when test="$isbn-length = 10">
+        <xsl:value-of select="isbn:validate-10($raw-isbn)" />
+      </xsl:when>
+      <xsl:when test="$isbn-length = 13">
+        <xsl:value-of select="isbn:validate-13($raw-isbn)" />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="false()" />
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:function>
 </xsl:stylesheet>
