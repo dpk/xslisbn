@@ -18,4 +18,9 @@
     <input>978 0 224 - 09758 1</input>
     <output>9780224097581</output>
   </test>
+
+  <test that="it can ignore elements">
+    <input><elt>9780224097581</elt></input>
+    <output>9780224097581</output>
+  </test>
 </testdata>

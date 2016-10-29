@@ -7,6 +7,6 @@
     <xsl:param name="isbn" />
     <xsl:variable name="string-isbn" select="string($isbn)" />
 
-    <xsl:value-of select="translate($string-isbn, translate($string-isbn, '012456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', ''), '')" />
+    <xsl:value-of select="translate($string-isbn, translate($string-isbn, '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', ''), '')" />
   </xsl:function>
 </xsl:stylesheet>
