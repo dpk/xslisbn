@@ -1,0 +1,55 @@
+<testdata>
+  <testdata for="validate-10">
+    <test that="it passes a valid ISBN 10">
+      <input>0199913773</input>
+      <valid />
+    </test>
+
+    <test that="it fails on a bad ISBN 10 check digit">
+      <input>0199913777</input>
+      <invalid />
+    </test>
+
+    <test that="it passes a valid ISBN 10 with X as check digit">
+      <input>097522980X</input>
+      <valid />
+    </test>
+
+    <test that="it fails an invalid ISBN 10 with X as check digit">
+      <input>097522981X</input>
+      <invalid />
+    </test>
+
+    <test that="it only allows X at the end of an ISBN">
+      <input>0X12345678</input>
+      <invalid />
+    </test>
+  </testdata>
+
+  <testdata for="validate-13">
+    <test that="it passes a valid ISBN 13">
+      <input>9780224097581</input>
+      <valid />
+    </test>
+
+    <test that="it fails a bad ISBN 13 check digit">
+      <input>9780224097586</input>
+      <invalid />
+    </test>
+
+    <test that="it doesn't allow you to have X as the check digit in an ISBN 13">
+      <input>978022409758X</input>
+      <invalid />
+    </test>
+
+    <test that="it doesn't allow you to have X anywhere else in an ISBN 13">
+      <input>978022X097586</input>
+      <invalid />
+    </test>
+
+    <test that="it makes sure the input is 13 digits long">
+      <input>9780224097</input>
+      <invalid />
+    </test>
+  </testdata>
+</testdata>

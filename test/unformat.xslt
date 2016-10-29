@@ -2,8 +2,9 @@
 <xsl:stylesheet version="2.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:isbn="tag:nonceword.org,2016:isbn">
-  <xsl:output method="text" />
   <xsl:include href="../unformat.xslt" />
+
+  <xsl:output method="text" />
   <xsl:strip-space elements="testdata test"/>
 
   <xsl:template match="//test">
