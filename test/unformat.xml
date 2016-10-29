@@ -1,0 +1,21 @@
+<testdata>
+  <test that="it removes hyphens">
+    <input>978-0-224-09758-1</input>
+    <output>9780224097581</output>
+  </test>
+
+  <test that="it doesn't remove letters">
+    <input>978-0-ABCXYZ</input>
+    <output>9780ABCXYZ</output>
+  </test>
+
+  <test that="it removes leading and trailing whitespaces">
+    <input>    978-0-224-09758-1 </input>
+    <output>9780224097581</output>
+  </test>
+
+  <test that="it removes interstitial whitespaces">
+    <input>978 0 224 - 09758 1</input>
+    <output>9780224097581</output>
+  </test>
+</testdata>
