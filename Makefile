@@ -1,13 +1,15 @@
 .PHONY: clean all
 
-all: format.xslt
+all: build/format.xslt
 
-isbn_ranges.xml:
-	curl -s -o isbn_ranges.xml https://www.isbn-international.org/export_rangemessage.xml
+build/isbn_ranges.xml: | build
+	curl -s -o build/isbn_ranges.xml https://www.isbn-international.org/export_rangemessage.xml
 
-format.xslt: meta/format.xslt isbn_ranges.xml
-	saxon -xsl:meta/format.xslt -s:isbn_ranges.xml > $@
+build/format.xslt: src/meta/format.xslt build/isbn_ranges.xml | build
+	saxon -xsl:src/meta/format.xslt -s:build/isbn_ranges.xml > $@
+
+build:
+	mkdir build
 
 clean:
-	rm -rf export_rangemessage.xml
-
+	rm -rf build

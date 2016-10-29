@@ -4,9 +4,6 @@
                 xmlns:isbn="tag:nonceword.org,2016:isbn"
                 xmlns:util="tag:nonceword.org,2016:isbn/private-internal">
 
-  <xsl:import href="unformat.xslt" />
-  <xsl:import href="util.xslt" />
-
   <xsl:function name="isbn:validate-10">
     <xsl:param name="isbn" />
 

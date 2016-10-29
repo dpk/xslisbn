@@ -4,8 +4,6 @@
                 xmlns:isbn="tag:nonceword.org,2016:isbn"
                 xmlns:util="tag:nonceword.org,2016:isbn/private-internal">
 
-  <xsl:import href="unformat.xslt" />
-
   <xsl:function name="util:nth-digit">
     <xsl:param name="isbn" />
     <xsl:param name="n" />
