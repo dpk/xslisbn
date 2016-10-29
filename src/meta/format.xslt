@@ -14,9 +14,6 @@
   </xsl:template>
   <xsl:template match="/ISBNRangeMessage/RegistrationGroups" priority="2">
     <axsl:stylesheet>
-      <axsl:import href="util.xslt" />
-      <axsl:import href="unformat.xslt" />
-
       <axsl:function name="isbn:format">
         <axsl:param name="isbn" />
         <axsl:variable name="raw-isbn" select="isbn:unformat($isbn)" />
