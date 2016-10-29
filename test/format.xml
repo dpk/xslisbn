@@ -4,15 +4,30 @@
     <output>978-0-224-09758-1</output>
   </test>
 
+  <test that="it adds all the hyphens in the right places to a fully known ISBN 10">
+    <input>022409758X</input>
+    <output>0-224-09758-X</output>
+  </test>
+
   <!-- these tests are correct as of the time of writing. a frozen copy of the ISBN prefix file from 2016-10-29 can be downloaded from gist https://gist.github.com/65257cee9381e680e279871fa13075a5 if some of the currently unassigned prefixes used for testing here become allocated -->
 
-  <test that="it adds hyphens in the right places when the registration group is known, but the registrant is not">
+  <test that="it adds hyphens in the right places when the registration group is known, but the registrant is not, in an ISBN 13">
     <input>9786050012347</input>
     <output>978-605-001234-7</output>
   </test>
 
-  <test that="it adds hyphens in the right places when the registration group is not known">
+  <test that="it adds hyphens in the right places when the registration group is known, but the registrant is not, in an ISBN 10">
+    <input>6050012342</input>
+    <output>605-001234-2</output>
+  </test>
+
+  <test that="it adds hyphens in the right places when the registration group is not known, in an ISBN 13">
     <input>9786101234568</input>
     <output>978-610123456-8</output>
+  </test>
+
+  <test that="it adds hyphens in the right places when the registration group is not known, in an ISBN 10">
+    <input>6101234568</input>
+    <output>610123456-8</output>
   </test>
 </testdata>

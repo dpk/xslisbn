@@ -10,7 +10,7 @@
   <xsl:template match="//test">
     <xsl:variable name="in" select="./input" />
     <xsl:variable name="expected" select="string(./output)" />
-    <xsl:variable name="actual" select="isbn:format-13(./input)" />
+    <xsl:variable name="actual" select="isbn:format(./input)" />
 
     <xsl:choose>
       <xsl:when test="$expected = $actual">
