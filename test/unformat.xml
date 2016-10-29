@@ -4,9 +4,14 @@
     <output>9780224097581</output>
   </test>
 
-  <test that="it doesn't remove letters">
+  <test that="it doesn't remove the letter X">
     <input>978-0-ABCXYZ</input>
-    <output>9780ABCXYZ</output>
+    <output>9780X</output>
+  </test>
+
+  <test that="it upper-cases the letter x">
+    <input>123456789x</input>
+    <output>123456789X</output>
   </test>
 
   <test that="it removes leading and trailing whitespaces">

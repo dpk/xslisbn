@@ -5,8 +5,8 @@
 
   <xsl:function name="isbn:unformat">
     <xsl:param name="isbn" />
-    <xsl:variable name="string-isbn" select="string($isbn)" />
+    <xsl:variable name="string-isbn" select="upper-case(string($isbn))" />
 
-    <xsl:value-of select="translate($string-isbn, translate($string-isbn, '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', ''), '')" />
+    <xsl:value-of select="translate($string-isbn, translate($string-isbn, '0123456789X', ''), '')" />
   </xsl:function>
 </xsl:stylesheet>
