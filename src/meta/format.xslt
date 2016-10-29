@@ -13,7 +13,7 @@
   <xsl:template match="/ISBNRangeMessage/*" priority="1">
   </xsl:template>
   <xsl:template match="/ISBNRangeMessage/RegistrationGroups" priority="2">
-    <axsl:stylesheet>
+    <axsl:stylesheet version="2.0">
       <axsl:function name="isbn:format">
         <axsl:param name="isbn" />
         <axsl:variable name="raw-isbn" select="isbn:unformat($isbn)" />
