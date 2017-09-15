@@ -37,7 +37,7 @@
     <xsl:param name="isbn" />
 
     <xsl:variable name="raw-isbn" select="isbn:unformat($isbn)" />
-    <xsl:variable name="expected-check-digit" select="10 - ((
+    <xsl:variable name="expected-check-digit" select="(10 - (
           (1 * util:nth-digit($raw-isbn, 1))
         + (3 * util:nth-digit($raw-isbn, 2))
         + (1 * util:nth-digit($raw-isbn, 3))
@@ -50,7 +50,7 @@
         + (3 * util:nth-digit($raw-isbn, 10))
         + (1 * util:nth-digit($raw-isbn, 11))
         + (3 * util:nth-digit($raw-isbn, 12))
-      ) mod 10)" />
+      )) mod 10" />
 
     <xsl:choose>
       <xsl:when test="not(matches($raw-isbn, '^[0-9]{13}$'))">

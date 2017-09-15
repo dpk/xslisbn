@@ -32,6 +32,11 @@
       <valid />
     </test>
 
+    <test that="it passes a valid ISBN 13 which would have X as a check digits">
+      <input>9780521431460</input>
+      <valid />
+    </test>
+    
     <test that="it fails a bad ISBN 13 check digit">
       <input>9780224097586</input>
       <invalid />
