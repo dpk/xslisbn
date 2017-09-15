@@ -52,8 +52,6 @@
         + (3 * util:nth-digit($raw-isbn, 12))
       ) mod 10)) mod 10" />
 
-
-    <xsl:message><xsl:value-of select="$expected-check-digit" /><xsl:text> </xsl:text><xsl:value-of select="util:nth-digit($raw-isbn, 13)" /></xsl:message>
     <xsl:choose>
       <xsl:when test="not(matches($raw-isbn, '^[0-9]{13}$'))">
         <xsl:value-of select="false()" />
