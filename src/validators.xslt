@@ -7,7 +7,7 @@
   <xsl:function name="isbn:expected-check-digit-10">
     <!-- @@@ CAN ONLY BE USED WITH UNFORMATTED ISBNS -->
     <xsl:param name="raw-isbn" />
-    <xsl:value-of select="11 - ((
+    <xsl:value-of select="(11 - (
           (10 * util:nth-digit($raw-isbn, 1))
         + ( 9 * util:nth-digit($raw-isbn, 2))
         + ( 8 * util:nth-digit($raw-isbn, 3))
@@ -17,7 +17,7 @@
         + ( 4 * util:nth-digit($raw-isbn, 7))
         + ( 3 * util:nth-digit($raw-isbn, 8))
         + ( 2 * util:nth-digit($raw-isbn, 9))
-      ) mod 11)" />
+      ) mod 11) mod 11" />
   </xsl:function>
   
   <xsl:function name="isbn:validate-10">
