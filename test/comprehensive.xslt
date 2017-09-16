@@ -10,6 +10,7 @@
   <xsl:template match="/tests/isbn">
     <xsl:variable name="isbn" select="string(.)" />
     <xsl:variable name="raw-isbn" select="isbn:unformat($isbn)" />
+    <xsl:variable name="expected-check-digit" select="isbn:check-digit($isbn)" />
     <xsl:variable name="check-digit">
       <xsl:choose>
         <xsl:when test="string-length($raw-isbn) = 13">
@@ -70,7 +71,11 @@
         </xsl:choose>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:text>   FAIL: does not validate&#x0A;</xsl:text>
+        <xsl:text>   FAIL: does not validate, expected check digit </xsl:text>
+        <xsl:value-of select="$expected-check-digit" />
+        <xsl:text>, got </xsl:text>
+        <xsl:value-of select="$check-digit" />
+        <xsl:text>&#x0A;</xsl:text>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
