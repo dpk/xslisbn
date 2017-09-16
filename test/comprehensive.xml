@@ -1,0 +1,46 @@
+<tests>
+  <!-- this list is used for end-to-end testing -->
+  <!-- all ISBNs listed here are valid, real ISBNs -->
+  <!-- sorted roughly by number -->
+  
+  <isbn>0-00-654335-9</isbn>
+  <isbn>0-14-042353-2</isbn>
+  <isbn>0-14-118280-6</isbn>
+  <isbn>0-19-964520-5</isbn>
+  <isbn>0-19-861186-2</isbn>
+  <isbn>0-201-13448-9</isbn>
+  <isbn>0-201-52983-1</isbn>
+  <isbn>0-672-32525-X</isbn>
+  <isbn>0-8156-0601-X</isbn>
+  <isbn>1-59059-356-1</isbn>
+  <isbn>1-85984-947-4</isbn>
+  <isbn>1-905505-13-2</isbn>
+  <isbn>2-07-010502-4</isbn>
+  <isbn>2-7432-0347-1</isbn>
+  <isbn>3-518-22372-0</isbn>
+  <isbn>5-7624-0021-2</isbn>
+  <isbn>88-452-7861-1</isbn>
+  <isbn>89-7699-572-4</isbn>
+  <isbn>975-6769-56-4</isbn>
+  <isbn>978-0-00-725976-2</isbn>
+  <isbn>978-0-14-044568-8</isbn>
+  <isbn>978-0-14-118031-1</isbn>
+  <isbn>978-0-241-95871-1</isbn>
+  <isbn>978-0-465-06069-6</isbn>
+  <isbn>978-0-486-49857-7</isbn>
+  <isbn>978-0-571-25072-1</isbn>
+  <isbn>978-0-674-05809-5</isbn>
+  <isbn>978-1-4302-2416-7</isbn>
+  <isbn>978-1-4494-3325-3</isbn>
+  <isbn>978-1-62356-915-0</isbn>
+  <isbn>978-1-903436-99-8</isbn>
+  <isbn>978-1-908717-18-4</isbn>
+  <isbn>978-2-251-34514-7</isbn>
+  <isbn>978-3-423-03025-0</isbn>
+  <isbn>978-3-550-08877-3</isbn>
+  <isbn>978-3-596-90147-0</isbn>
+  <isbn>978-3-8430-9028-5</isbn>
+  <isbn>978-5-699-65467-3</isbn>
+  <isbn>978-963-9997-58-5</isbn>
+  <isbn>979-12-200-1593-6</isbn>
+</tests>
