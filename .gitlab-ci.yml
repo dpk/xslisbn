@@ -5,12 +5,12 @@ make_all:
   script:
     - apt-get update
     - apt-get install -yy make curl
+    - "echo '#!/bin/bash' > /usr/local/bin/saxon"
+    - "echo 'exec java -jar /usr/share/java/Saxon-HE.jar \"$@\"' >> /usr/local/bin/saxon"
+    - chmod +x /usr/local/bin/saxon
     - make all
 
 make_test:
   stage: test
   script:
-    - "echo '#!/bin/bash' > /usr/local/bin/saxon"
-    - "echo 'exec java -jar /usr/share/java/Saxon-HE.jar \"$@\"' >> /usr/local/bin/saxon"
-    - chmod +x /usr/local/bin/saxon
     - make test
