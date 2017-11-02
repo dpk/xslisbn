@@ -14,12 +14,12 @@
 
     <xsl:choose>
       <xsl:when test="$expected = $actual">
-        <xsl:text>pass "</xsl:text>
+        <xsl:text>PASS: "</xsl:text>
           <xsl:value-of select="@that" />
         <xsl:text>"&#x0A;</xsl:text>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:text>fail "</xsl:text>
+        <xsl:text>FAIL: "</xsl:text>
           <xsl:value-of select="@that" />
         <xsl:text>"&#x0A;</xsl:text>
       </xsl:otherwise>
@@ -33,12 +33,12 @@
 
     <xsl:choose>
       <xsl:when test="$expected = $actual">
-        <xsl:text>pass "</xsl:text>
+        <xsl:text>PASS: "</xsl:text>
           <xsl:value-of select="@that" />
         <xsl:text>"&#x0A;</xsl:text>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:text>fail "</xsl:text>
+        <xsl:text>FAIL: "</xsl:text>
           <xsl:value-of select="@that" />
         <xsl:text>"&#x0A;</xsl:text>
       </xsl:otherwise>
