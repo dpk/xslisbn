@@ -1,4 +1,4 @@
-.PHONY: clean release all
+.PHONY: clean release all test
 
 all: build/format.xslt
 
@@ -27,3 +27,7 @@ pkg:
 
 clean:
 	rm -rf build pkg
+
+test: | build
+	printf '' > build/test.log
+	for testsuite in test/*.xslt; do if (echo $$testsuite; saxon -s:"$$(echo "$$testsuite" | sed -E 's/\.xslt$$/.xml/')" -xsl:"$$testsuite") | tee -a build/test.log /dev/stderr | egrep -q '^\s*FAIL:'; then exit 1; fi; done
