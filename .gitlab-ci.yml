@@ -9,8 +9,13 @@ make_all:
     - "echo 'exec java -jar /usr/share/java/Saxon-HE.jar \"$@\"' >> /usr/local/bin/saxon"
     - chmod +x /usr/local/bin/saxon
     - make all
+  artifacts:
+    paths:
+      - build/
 
 make_test:
   stage: test
   script:
     - make test
+  dependencies:
+    - make_all
