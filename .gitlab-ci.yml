@@ -1,4 +1,4 @@
-image: 'registry.gitlab.com/dpkendal/xslisbn'
+image: 'registry.gitlab.com/dpk/xslisbn'
 
 make_all:
   stage: build
